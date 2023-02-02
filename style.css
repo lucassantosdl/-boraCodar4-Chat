@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62,5%;
+}
+
+body {
+    background-color: #1a1924;
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;;
+}
+
+
+#app {
+    padding: 2.4rem 3.2rem;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    max-width: 880px;
+    margin: auto;
+}
+
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-size: 1.2rem;
+}
+
+#user-info img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+#user-status .status::before {
+    content: "";
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color:#00b37e;
+    border-radius: 50%;
+    display: block;
+}
+
+#user-status .status {
+    color: #00b37e;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    
+}
+
+#close-chat {
+    cursor: pointer;
+}
+
+#last-seen {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-top: 2.6rem;
+    text-align: center;
+}
+
+.messages {
+    margin-top: 3rem;
+    display: grid;
+    gap: 3rem;
+    font-size: 13px;
+    line-height: 14px;
+    
+}
+
+.message .body {
+    margin-top: 1rem;
+    background-color: #633bbc;
+    width: 20rem fit-content;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 0 .8rem .8rem .8rem;
+    
+}   
+.message-you {
+    margin-left: auto;
+    padding: 1.4rem;
+}
+
+.message-you .top {
+    text-align: right;
+}
+
+.message:not(.you) {
+    width: 40vw;
+}
+.message-you .body {
+    margin-top: 0.8rem;
+    background-color: #07847e;
+    border-radius: 0 .8rem .8rem .8rem;
+    width: 13rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+
+.input-wrapper {
+    display: flex;  
+    align-items: center;
+    background-color: #282843;
+    border-radius: 999rem;
+    padding: 1.4rem 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.input-wrapper input::placeholder {
+    color: #e1e1e6;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    
+}
+
+.input-wrapper input {
+    flex: 1;
+    outline: none;
+    color: #e1e1e6;
+}
+
+
+.input-wrapper:focus-within {
+    border: 1px solid white;
+}
+
+input, button {
+    background-color: transparent;  
+    border: 0;
+}
+
+
+.input-wrapper button i {
+    color: #e1e1e6;
+    font-size: 2.4rem;
+    cursor: pointer;
+}
